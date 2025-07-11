@@ -1,6 +1,6 @@
-LIBS= -lglut -lGLU -lGL -lXmu -lXext -lX11 -lm
-CFLAGS=-g -O
+LIBS= -lSDL2 -lm
+CFLAGS=-g -O -D_REENTRANT -I/usr/include/SDL2
 CC=cc
 
-rtrt3:	rtrt3.o
-	$(CC) -o rtrt3 $(CFLAGS) rtrt3.o $(LIBS)
+rtrt:	rtrt.o
+	$(CC) -o rtrt $(CFLAGS) rtrt.o $(LIBS)
